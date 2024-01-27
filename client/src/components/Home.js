@@ -10,7 +10,7 @@ function Home() {
         <TopNavigation/>
         <h1>WellCome To Home Page</h1>
         <div>
-          <img className='StoreObjprofilePic' src={`http://localhost:4567/${storeObj.loginReducer.loginDetails.profilePic}`}></img>
+          <img className='StoreObjprofilePic' src={`/${storeObj.loginReducer.loginDetails.profilePic}`}></img>
          <h3>{storeObj.loginReducer.loginDetails.firstName} {""} {storeObj.loginReducer.loginDetails.lastName}</h3>
         </div>
         

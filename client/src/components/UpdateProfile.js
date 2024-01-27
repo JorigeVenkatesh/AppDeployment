@@ -21,7 +21,7 @@ function UpdateProfile() {
     lastNameInputRef.current.value = storeObj.loginReducer.loginDetails.lastName;
     ageInputRef.current.value = storeObj.loginReducer.loginDetails.age;
     emailInputRef.current.value = storeObj.loginReducer.loginDetails.email;
-    setProfilePicPath(`http://localhost:4567/${storeObj.loginReducer.loginDetails.profilePic}`)
+    setProfilePicPath(`/${storeObj.loginReducer.loginDetails.profilePic}`)
    },[])
 
   
@@ -46,7 +46,7 @@ function UpdateProfile() {
         body : dataToSend,
     };
 
-    let JSONData = await fetch("http://localhost:4567/updateProfile",reqOptions);
+    let JSONData = await fetch("/updateProfile",reqOptions);
 
     let JSOData = await JSONData.json();
     console.log(JSOData);

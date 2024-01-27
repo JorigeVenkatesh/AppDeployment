@@ -17,7 +17,7 @@ function TopNavigation() {
 
    let deleteProfile = async ()=>{
     let reqOptions = {method: "DELETE"};
-    let url = `http://localhost:4567/deleteProfile?email=${storeObj.loginReducer.loginDetails.email}`;
+    let url = `/deleteProfile?email=${storeObj.loginReducer.loginDetails.email}`;
 
     let JSONData = await fetch(url,reqOptions);
     let JSOData = await JSONData.json();
